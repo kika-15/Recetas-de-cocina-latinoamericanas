@@ -1,5 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     margin: 0;
     padding: 0;
     background-color: #eff6fc;
@@ -9,12 +11,14 @@ h1, h2, h3, h4, h5, h6{
     color: #170f44
 }
 
+/* Contenedor del sitio */
 .contenedor{
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
 
+/*Primer sección: navbar*/
 .navbar{
     display: flex;
     flex-direction: row;
@@ -23,16 +27,16 @@ h1, h2, h3, h4, h5, h6{
     margin-bottom: 10px;
 }
 
-.nav_logo{
+.navbar_logo{
     width: 20%;
 }
 
-.nav_botonera{
+.navbar_botonera{
     width: 55%;
     text-align: center;
 }
 
-.nav_botonera a{
+.navbar_botonera a{
     padding: 20px;
     text-decoration: none;
     font-size: 20px;
@@ -40,14 +44,15 @@ h1, h2, h3, h4, h5, h6{
     color: #170f44;
 }
 
-.nav_redes{
+.navbar_redes{
     width: 25%;
 }
 
-.nav_redes a{
+.navbar_redes a{
     padding: 10px;
 }
 
+/* Segunda sección: banner */
 .banner{
     margin-bottom: 10px;
 }
@@ -57,19 +62,61 @@ h1, h2, h3, h4, h5, h6{
     height: auto;
 }
 
-.contenidos_intro {
+/* Tercera sección: intro (solo en la home) */
+.intro {
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contenidos_intro p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+/* Cuarta sección: recetas */
+.recetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
+/* Estilos de las tarjetas de receta */
+.receta_tarjeta{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:280px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
+  margin: 5px;
+}
+
+.receta_tarjeta_titulo{
+  font-size: 14px;
+  color: #170f44;
+  padding: 0px 0px 0px 15px;
+}
+.receta_tarjeta_cuerpo{
+  margin: auto;
+}
+
+.receta_tarjeta_cuerpo img{
+    width: 250px;
+    height: 200px;
+    padding: 0px 0px 5px 0px;
+}
+
+.receta_tarjeta_pie{
+  background: #6699ff;
+  border-radius:0 0 15px 15px;
+  padding: 5px;
+  text-align:center;
+}
+.receta_tarjeta_pie a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos de la botonera de países en recetas*/
 .recetas_botonera{
     display: flex;
     flex-direction: row;
@@ -89,60 +136,29 @@ h1, h2, h3, h4, h5, h6{
     margin: 5px;
 }
 
-.destacadas_recetas{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
+/* Estilos de la receta completa*/
 .receta{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  width:280px;
-  border: 1px solid lightgray;
-  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
-  margin: 5px;
-}
-
-.receta_descripcion{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content:space-between;
-    width:280px;
+    width:1000px;
     border: 1px solid lightgray;
     box-shadow: 2px 2px 8px 4px #d3d3d3d1;
     border-radius:15px;
-    margin: 5px;
+    margin: auto;
+    padding: 10px;
   }
 
-.titulo{
-  font-size: 14px;
-  color: #170f44;
-  padding: 0px 0px 0px 15px;
-}
-.cuerpo{
-  margin: auto;
-}
+  .receta_imagen{
+    width: 450px;
+    height: 300px;
+  }
 
-.cuerpo img{
-    width: 250px;
-    height: 200px;
-    padding: 0px 0px 5px 0px;
-}
-.pie{
-  background: #6699ff;
-  border-radius:0 0 15px 15px;
-  padding: 5px;
-  text-align:center;
-}
-.pie a{
-  text-decoration: none;
-  color: white;
-}
+  .receta_col1, .receta_col2{
+    margin: 10px;
+  }
 
+/* Pié de página */
 footer{
     text-align: center;
     color: #170f44;
