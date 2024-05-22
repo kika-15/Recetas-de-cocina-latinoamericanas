@@ -139,3 +139,9 @@ h2 {
 .navbar_redes a{
     padding: 10px;
 }
+
+/* Pié de página */
+footer{
+    text-align: center;
+    color: #170f44;
+}
