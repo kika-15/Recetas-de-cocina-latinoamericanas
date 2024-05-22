@@ -1,46 +1,52 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #eff6fc;
 }
+
 header {
     background-color: #f0f9fd;
     color: #141414;
     padding: 20px;
     text-align: center;
 }
+
 section {
     padding: 20px;
+    max-width: 800px; /* Ancho máximo para las secciones */
+    margin: 0 auto; /* Centrar horizontalmente */
+    text-align: justify; /* Justificar el texto en secciones */
 }
+
 h2 {
     margin-top: 0;
+    color: #777676; /* Verde menta claro */
 }
+
 .receta {
     margin-bottom: 30px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
+    text-align: justify; /* Justificar el texto en recetas */
 }
-.intro-container {
+
+.intro-container, #indice {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify; /* Justificar el texto en intro-container e índice */
 }
+
 .intro-container p {
     font-size: 18px;
     line-height: 1.6;
     color: #333;
-}
-#indice {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;   
-    background-color:  #faf5f8;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify; /* Justificar el texto en párrafos de intro-container */
 }
 
 #indice ul {
@@ -64,20 +70,10 @@ h2 {
     color: #ff69b4; /* Cambiar color al pasar el ratón */
 }
 
-section {
-    padding: 20px;
-    max-width: 800px; /* Ancho máximo para las secciones */
-    margin: 0 auto; /* Centrar horizontalmente */
-}
-
-.receta {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-}
 .receta-preparation {
     font-family: Arial, sans-serif;
     margin-top: 20px;
+    text-align: justify; /* Justificar el texto en receta-preparation */
 }
 
 .receta-preparation ol {
@@ -98,16 +94,13 @@ section {
     margin-left: -1em; /* Alinea la viñeta con el texto */
 }
 
-h2 {
-    color: #777676; /* Verde menta claro */
-}
-
-.imagen_receta{
+.imagen_receta {
     max-width: 300px;
+    width: 100%; /* Asegurar que la imagen se ajuste al ancho del contenedor */
 }
 
-/*Primer sección: navbar*/
-.navbar{
+/* Primer sección: navbar */
+.navbar {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -115,16 +108,16 @@ h2 {
     margin-bottom: 10px;
 }
 
-.navbar_logo{
+.navbar_logo {
     width: 20%;
 }
 
-.navbar_botonera{
+.navbar_botonera {
     width: 55%;
     text-align: center;
 }
 
-.navbar_botonera a{
+.navbar_botonera a {
     padding: 20px;
     text-decoration: none;
     font-size: 20px;
@@ -132,16 +125,86 @@ h2 {
     color: #170f44;
 }
 
-.navbar_redes{
+.navbar_redes {
     width: 25%;
 }
 
-.navbar_redes a{
+.navbar_redes a {
     padding: 10px;
 }
 
 /* Pié de página */
-footer{
+footer {
     text-align: center;
     color: #170f44;
 }
+
+/* Media queries para tabletas */
+@media (max-width: 768px) {
+    .intro-container, #indice, section {
+        max-width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar_logo, .navbar_botonera, .navbar_redes {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar_botonera a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .intro-container p {
+        font-size: 16px; /* Ajustar tamaño de fuente para tabletas */
+    }
+
+    #indice ul li a {
+        font-size: 15px; /* Ajustar tamaño de fuente para tabletas */
+    }
+}
+
+/* Media queries para celulares */
+@media (max-width: 480px) {
+    .intro-container, #indice, section {
+        max-width: 100%;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .navbar_logo, .navbar_botonera, .navbar_redes {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .navbar_botonera a {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .intro-container p {
+        font-size: 14px; /* Ajustar tamaño de fuente para móviles */
+    }
+
+    #indice ul li a {
+        font-size: 14px; /* Ajustar tamaño de fuente para móviles */
+    }
+
+    .imagen_receta {
+        max-width: 100%;
+    }
+}
+
+
