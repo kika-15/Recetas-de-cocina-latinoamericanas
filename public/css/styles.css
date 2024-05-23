@@ -11,6 +11,43 @@ h1, h2, h3, h4, h5, h6{
     color: #170f44
 }
 
+i{
+    font-size: 30px;
+    margin: 10px;
+}
+
+hr{
+    color: #170f44;
+    width: 100%;
+}
+
+.btn_success{
+    background-color: #170f44;
+    border: #d3d3d3d1 1px solid;
+    border-radius: 10px;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+}
+
+.btn_danger{
+    background-color: red;
+    border: #d3d3d3d1 1px solid;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+
+.botones_btn{
+    text-align: center;
+}
+
+#msg_nombre, #msg_email, #msg_consulta, #msg_pais, #msg_imagen, #msg_tipo, #msg_alimentacion, #msg_tiempo, #msg_ingredientes, #msg_preparacion, #msg_password{
+    color: red;
+    visibility: hidden;
+}
+
 /* Contenedor del sitio */
 .contenedor{
     margin: 20px;
@@ -32,20 +69,25 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .navbar_botonera{
-    width: 55%;
+    width: 60%;
     text-align: center;
 }
 
+.navbar_botonera_active{
+    color: #a77d0d !important;
+}
+
 .navbar_botonera a{
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #170f44;
 }
 
-.navbar_redes{
-    width: 25%;
+.navbar_usuarios{
+    width: 20%;
+    text-align: right;
 }
 
 .navbar_redes a{
@@ -88,6 +130,11 @@ h1, h2, h3, h4, h5, h6{
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
   border-radius:15px;
   margin: 5px;
+  transition: box-shadow 1s;
+}
+
+.receta_tarjeta:hover{
+    box-shadow: 2px 2px 8px 4px #170f44;
 }
 
 .receta_tarjeta_titulo{
@@ -100,8 +147,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .receta_tarjeta_cuerpo img{
-    width: 250px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     padding: 0px 0px 5px 0px;
 }
 
@@ -146,20 +193,198 @@ h1, h2, h3, h4, h5, h6{
     box-shadow: 2px 2px 8px 4px #d3d3d3d1;
     border-radius:15px;
     margin: auto;
+    margin-bottom: 20px;
     padding: 10px;
   }
 
-  .receta_imagen{
-    width: 450px;
-    height: 300px;
+.receta_col1, .receta_col2{
+    padding: 10px;
+}
+
+/* sección Tu Receta*/
+.tu_receta{
+    margin: 10px;
+}
+
+/* sección Contáctenos */
+.contacto{
+    display:flex;
+    flex-direction: column;
+    text-align: justify;
+    width:500px;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+    border-radius:15px;
+    margin: auto;
+    padding: 10px;
   }
 
-  .receta_col1, .receta_col2{
-    margin: 10px;
-  }
+  /* Login de usuarios */
+.login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width:500px;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+    border-radius:15px;
+    margin: auto;
+    padding: 20px;
+}
 
 /* Pié de página */
 footer{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
     text-align: center;
     color: #170f44;
+}
+
+.footer_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer_ubicacion{
+    width: 50%;
+    justify-content: center;
+}
+
+.footer_ubicacion iframe{
+    width: 400px;
+    height: auto;
+}
+
+.footer_redes{
+    width: 50%;
+}
+
+.footer_redes a img{
+    padding: 20px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (max-width: 992px) {
+    .receta{
+        display: block !important;
+        width: 770px;
+    }
+    a.navbar_botonera_active{
+        color: white;
+    }
+}
+
+/* Media queries para tabletas */
+@media (max-width: 768px) {
+    nav.navbar{
+        display: block;
+        width: 100%;
+        background-color: #eff6fc;
+        text-align: center;
+    }
+    .navbar_botonera{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #a77d0d;
+    }
+    .navbar_botonera a{
+        border: #170f44 1px solid;
+    }
+    .navbar_usuarios{
+        width: 100% !important;
+        text-align: center;
+    }
+    a.navbar_botonera_active{
+        color: white !important;
+    }
+    .receta{
+        display: block;
+        width: 480px;
+    }
+    .receta_imagen{
+        width: 400px;
+    }
+    textarea {
+        height: 4em;
+        width: 28em;
+    }
+    .contacto{
+        width: 400px;
+    }
+    .login{
+        width: 400px;
+    }
+    .footer_ubicacion iframe{
+        width: 250px;
+    }
+    .footer_redes{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Media queries para celulares */
+@media (max-width: 480px) {
+    nav.navbar{
+        display: block;
+        width: 100%;
+        background-color: #eff6fc;
+        text-align: center;
+    }
+    .navbar_botonera{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #a77d0d;
+    }
+    .navbar_botonera a{
+        border: #170f44 1px solid;
+    }
+    a.navbar_botonera_active{
+        color: white !important;
+    }
+    .navbar_logo{
+        width: 100%;
+    }
+    .navbar_usuarios{
+        display: none;
+    }
+    .receta{
+        display: block;
+        width: 400px;
+    }
+    .receta_imagen{
+        width: 400px;
+    }
+    textarea {
+        height: 4em;
+        width: 25em;
+    }
+    fieldset{
+        width: 20em;
+    }
+    .contacto{
+        width: 400px;
+    }
+    .login{
+        width: 400px;
+    }
+    .footer_info{
+        display: block;
+    }
+    .footer_redes{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    .footer_ubicacion iframe{
+        padding: 0px;
+        width: 400px;
+    }
 }
