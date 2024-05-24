@@ -21,6 +21,10 @@ hr{
     width: 100%;
 }
 
+.copyright{
+    font-size: 20px;
+}
+
 .btn_success{
     background-color: #170f44;
     border: #d3d3d3d1 1px solid;
@@ -269,7 +273,7 @@ footer{
 @media (max-width: 992px) {
     .receta{
         display: block !important;
-        width: 770px;
+        width: 700px !important;
     }
     a.navbar_botonera_active{
         color: white;
@@ -303,10 +307,10 @@ footer{
     }
     .receta{
         display: block;
-        width: 480px;
+        width: 410px;
     }
     .receta_imagen{
-        width: 400px;
+        width: 395px;
     }
     textarea {
         height: 4em;
@@ -360,7 +364,7 @@ footer{
         width: 400px;
     }
     .receta_imagen{
-        width: 400px;
+        width: 380px !important;
     }
     textarea {
         height: 4em;
